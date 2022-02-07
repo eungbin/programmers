@@ -50,3 +50,46 @@ function change124(list) {
 function change(n) {
   return Math.floor(n);
 }
+
+
+
+/*
+function solution(n) {
+    var answer = "";
+    var stringAnswer = n.toString(3).split("").map(i=>parseInt(i,10));
+    stringAnswer = change124(stringAnswer);
+    var i = 0;
+    while(i < stringAnswer.length) {
+        answer += String(stringAnswer[i]);
+        i += 1;
+    }
+    return answer;
+}
+
+function change124(list) {
+    var i = 0;
+    console.log(list);
+    while(i <= list.length-1) {
+        if(list[i] === 0) {
+            list[i-1] -= 1;
+            list[i] += 3;
+            i = 0;
+        }
+        i += 1;
+    }
+    if(list[0] === 0) {
+        list.shift();
+    }
+    i = 0;
+    while(i < list.length) {
+        if(list[i] === 3) {
+            list[i] = 4;
+        }
+        i += 1;
+    }
+    return list;
+}
+function change(n) {
+    return Math.floor(n);
+}
+*/
