@@ -47,6 +47,7 @@ function change124(list) {
   }
   return list;
 }
+
 function change(n) {
   return Math.floor(n);
 }
