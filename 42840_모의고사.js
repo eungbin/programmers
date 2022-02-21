@@ -24,3 +24,22 @@ function solution(answers) {
 }
 
 //solution 2
+function solution(answers) {
+  const returnAnswer = [];
+  const answer = [];
+  const firstAnswer = [1, 2, 3, 4, 5];
+  const secondAnswer = [2, 1, 2, 3, 2, 4, 2, 5];
+  const thirdAnswer = [3, 3, 1, 1, 2, 2, 4, 4, 5 ,5];
+  
+  answer.push(answers.filter((a, idx) => a === firstAnswer[idx%firstAnswer.length]).length);
+  answer.push(answers.filter((a, idx) => a === secondAnswer[idx%secondAnswer.length]).length);
+  answer.push(answers.filter((a, idx) => a === thirdAnswer[idx%thirdAnswer.length]).length);
+  
+  const maxAnswer = Math.max(...answer);
+  
+  answer.map((i, idx) => {
+    if(i === maxAnswer) returnAnswer.push(idx+1);  
+  })
+  
+  return returnAnswer;
+}
