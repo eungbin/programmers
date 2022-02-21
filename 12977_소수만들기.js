@@ -1,3 +1,4 @@
+// solution 1
 function solution(nums) {
   var answer = 0;
   
