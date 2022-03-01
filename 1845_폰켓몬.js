@@ -13,3 +13,12 @@ function solution(nums) {
   
   return answer;
 }
+
+// solve 2 (using Set)
+function solution(nums) {
+  let answer = 0;
+  let amount = new Set(nums).size;
+  answer = (amount >= (nums.length)/2 ? (nums.length)/2 : amount);
+  
+  return answer;
+}
