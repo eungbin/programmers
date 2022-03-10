@@ -25,5 +25,3 @@ function solution(N, stages) {
   
   return answer.map(i => i[0]);
 }
-
-
