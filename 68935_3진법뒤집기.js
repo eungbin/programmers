@@ -8,3 +8,11 @@ function solution(n) {
     
     return answer;
 }
+
+// solution 1 Method chaining
+function solution(n) { 
+    return Number.parseInt(n.toString(3).
+                            split("").
+                            reverse().
+                            join(""), 3);
+}
