@@ -16,3 +16,7 @@ function solution(name, yearning, photo) {
 }
 
 // 2nd solution
+function solution(name, yearning, photo) {
+    // initial value를 주는 이유: 최초 콜백 호출 시 cur이 배열의 첫 번째 요소
+    return photo.map((v) => v.reduce((acc, cur) => acc+(yearning[name.indexOf(cur)] ?? 0), 0));
+}
